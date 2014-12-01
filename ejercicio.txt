@@ -1,0 +1,63 @@
+Define las siguientes clases con las propiedades dada y añade sus métodos getter y setter:
+
+public class Manzana {
+//propiedades
+private String tipoManzana;
+private String procedencia;
+private String color;
+private Double eurosKilo;
+private Distribuidor distribuidor;
+
+//métodos getter y setter
+
+}
+
+public class Lechuga {
+
+//propiedades
+private String tipoLechuga;
+private String procedencia;
+private String color;
+private Double eurosUnidad;
+private Distribuidor distribuidor;
+
+//métodos getter y setter
+
+}
+
+public class leche {
+
+//propiedades
+private String tipo;
+private String procedencia;
+private Double eurosLitro;
+private Distribuidor distribuidor;
+
+//métodos getter y setter
+
+}
+
+public class Distribuidor {
+//propiedades
+private String nombre;
+private String CIF;
+private Dirección dirección;
+private Contacto personaContacto;
+
+//metodos getter y setter
+}
+
+public class Dirección {
+
+//añadid las propiedades convenientes
+
+//métodos getter y setter
+}
+
+
+public class Contacto {
+
+//añadid las propiedades convenientes
+
+//métodos getter y setter
+}
