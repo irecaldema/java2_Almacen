@@ -21,7 +21,7 @@ public class Distribuidor {
 		return CIF;
 	}	
 	
-	public void setDirección(Direccion direccion) {
+	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
 	}
 	public Direccion getDireccion() {
