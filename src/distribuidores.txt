@@ -1,0 +1,5 @@
+FastFood,P2821391F,calle123,Gorka
+BurgerMaster,F9003448I,calle456,Ruben
+LacteosMax,L20092599,calle678,Giovany
+ManzanasSA,B35968544,calle987,Iban
+VerdurasXXL,V2530112H,calle654,Eigoitz

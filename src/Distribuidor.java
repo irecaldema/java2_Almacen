@@ -4,6 +4,7 @@ public class Distribuidor {
     private String CIF;
     private Dirección dirección;
     private Contacto personaContacto;
+    //nombre,CIF,direccion,personaContacto
     
     //metodos getter y setter
 	public void setNombre(String nombre) {
