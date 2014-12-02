@@ -43,7 +43,7 @@ public class Almacen {
 		}
 
 	    for(int x=0; x<al_distri.size(); x++){
-	    	System.out.println("--------------------------------");	
+			System.out.println("--------------------------------");	
 			//nombre,CIF,o_direccion,o_personaContacto
 				System.out.println("nombre: " + al_distri.get(x).getNombre());
 				System.out.println("C.I.F.: " + al_distri.get(x).getCIF());
