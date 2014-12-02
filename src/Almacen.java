@@ -19,7 +19,7 @@ public class Almacen {
 			
 		    campos = s.split(",");
 		    
-		    	//introducimos los valores en los objetos para despues añadirlos al AarrayList
+		    //introducimos los valores en los objetos para despues añadirlos al ArrayList
 	 			//DISTRIBUIDOR
 	 			distri.setNombre(campos[0]);
 	 			distri.setCIF(campos[1]);
