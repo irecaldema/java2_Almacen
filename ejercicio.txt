@@ -1,3 +1,7 @@
+******************************************************
+
+3.10
+
 Define las siguientes clases con las propiedades dada y añade sus métodos getter y setter:
 
 public class Manzana {
@@ -61,3 +65,13 @@ public class Contacto {
 
 //métodos getter y setter
 }
+
+******************************************************
+
+3.11
+
+- Crea un programa principal que lea un fichero de texto "distribuidores.txt" que contiene la información de 4-5 distribuidores y mete esa lista de distribuidores en un ArrayList. 
+
+- Visualiza en la pantalla del terminal e contenido del ArrayList para asegurarte de que han sido insertados correctamente.
+
+- Compila y ejecuta para garantizar el buen funcionamiento del programa.
