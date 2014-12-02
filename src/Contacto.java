@@ -20,10 +20,10 @@ public class Contacto {
 		return apellido;
 	}    
 
-	public void setTelefono(String telefono) {
+	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public String getTelefono() {
+	public int getTelefono() {
 		return telefono;
 	}  	
 }

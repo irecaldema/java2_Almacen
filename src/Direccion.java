@@ -1,13 +1,13 @@
-public class Dirección {
+public class Direccion {
 
     //añadid las propiedades convenientes
-    private String dirección;
+    private String direccion;
 
     //métodos getter y setter
-	public void setDirección(String dirección) {
-		this.dirección = dirección;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
-	public String getDirección() {
-		return dirección;
+	public String getDireccion() {
+		return direccion;
 	}    
 }

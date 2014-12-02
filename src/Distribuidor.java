@@ -2,7 +2,7 @@ public class Distribuidor {
     //propiedades
     private String nombre;
     private String CIF;
-    private Dirección dirección;
+    private Direccion direccion;
     private Contacto personaContacto;
     //nombre,CIF,direccion,personaContacto
     
@@ -21,17 +21,17 @@ public class Distribuidor {
 		return CIF;
 	}	
 	
-	public void setDirección(Dirección dirección) {
-		this.dirección = dirección;
+	public void setDirección(Direccion direccion) {
+		this.direccion = direccion;
 	}
-	public Dirección getDirección() {
-		return dirección;
+	public Direccion getDireccion() {
+		return direccion;
 	}	
 	
-	public void setContacto(Contacto personaContacto) {
+	public void setPersonaContacto(Contacto personaContacto) {
 		this.personaContacto = personaContacto;
 	}
-	public Contacto getContacto() {
+	public Contacto getPersonaContacto() {
 		return personaContacto;
 	}		
 }
