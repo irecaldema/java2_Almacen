@@ -75,3 +75,13 @@ public class Contacto {
 - Visualiza en la pantalla del terminal e contenido del ArrayList para asegurarte de que han sido insertados correctamente.
 
 - Compila y ejecuta para garantizar el buen funcionamiento del programa.
+
+******************************************************
+
+3.12
+
+- Dentro del programa principal y tras haber leído el fichero de texto "distribuidores.txt", solicita información por pantalla para recoger los datos de 2 manzanas, una lechuga y 2 leches. Para cada uno de los productos pide sólamente el nombre del distribuidor. Con este nombre, busca en el ArrayList de distribuidores el objeto de Distribuidor que le corresponde y asígnaselo al producto. Finalmente, inserta los productos en ArrayLists de modo que queden debidamente identificados. 
+
+- Visualiza en la pantalla del terminal el contenido de los ArrayLists para asegurarte de que los productos han sido insertados correctamente.
+
+- Compila y ejecuta para garantizar el buen funcionamiento del programa.
