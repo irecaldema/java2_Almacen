@@ -135,6 +135,89 @@ public class Almacen {
 			al_leche.add(lec);	
 			}
 		}
+		
+		//visualizacion de los productos
+		//manzana,lechuga y leche
+		System.out.println("****Manzana*****");
+			/*
+			String tipoManzana, procedencia, color, 
+			Double eurosKilo;
+			Distribuidor distribuidor;
+			*/
+		for(int i = 0;i<al_manza.size();i++)	{
+			System.out.println("Tipo de leche: "+(al_manza.get(i).getTipoManzana()));
+			System.out.println("Prcedencia: "+(al_manza.get(i).getProcedencia()));
+			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
+			System.out.println("€/Kg: "+(al_manza.get(i).getEuroslitro()));
+			System.out.println("****DISTRIBUIDOR*****");
+			    /*
+			    String nombre,	CIF;
+				Direccion direccion;
+					String direccion;
+				Contacto personaContacto;
+				    String nombre, apellido;
+					int telefono;   
+				*/
+			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
+			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
+			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("*********************************************************");
+		}
+		System.out.println("****Lechuga*****");
+			/*
+			String tipoLechuga, procedencia, color;
+			Double eurosUnidad;
+			Distribuidor distribuidor;
+			*/
+		for(int i = 0;i<al_lechuga.size();i++)	{
+			System.out.println("Tipo de leche: "+(al_lechuga.get(i).getTipo()));
+			System.out.println("Prcedencia: "+(al_lechuga.get(i).getProcedencia()));
+			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
+			System.out.println("€/Unidad: "+(al_lechuga.get(i).getEurosUnidad()));
+			System.out.println("****DISTRIBUIDOR*****");
+			    /*
+			    String nombre,	CIF;
+				Direccion direccion;
+					String direccion;
+				Contacto personaContacto;
+				    String nombre, apellido;
+					int telefono;   
+				*/
+			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
+			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
+			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("*********************************************************");
+		}
+		System.out.println("****Leche*****");
+			/*
+    		String tipo, procedencia;
+			Double eurosLitro;
+			Distribuidor distribuidor;
+			*/
+		for(int i = 0;i<al_leche.size();i++)	{
+			System.out.println("Tipo de leche: "+(al_leche.get(i).getTipo()));
+			System.out.println("Prcedencia: "+(al_leche.get(i).getProcedencia()));
+			System.out.println("€/Kg: "+(al_leche.get(i).getEuroslitro()));
+			System.out.println("****DISTRIBUIDOR*****");
+			    /*
+			    String nombre,	CIF;
+				Direccion direccion;
+					String direccion;
+				Contacto personaContacto;
+				    String nombre, apellido;
+					int telefono;   
+				*/
+			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
+			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
+			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("*********************************************************");
+		}
     
 		// Vaciar los ArrayList
 		al_distri.clear();
