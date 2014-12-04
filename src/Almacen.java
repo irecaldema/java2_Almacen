@@ -78,7 +78,7 @@ public class Almacen {
 			System.out.println("\n		color:");
 			manza.setColor(sc.next());
 			System.out.println("\n		€/kilo:");
-			manza.setEurosKilo(sc.nextInt());			
+			manza.setEurosKilo(sc.nextDouble());			
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
 			//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -109,7 +109,7 @@ public class Almacen {
 		System.out.println("\n		color:");
 		lechu.setColor(sc.next());
 		System.out.println("\n		€/unidad:");
-		lechu.setEurosUnidad(sc.nextInt());	
+		lechu.setEurosUnidad(sc.nextDouble());	
 		System.out.println("\n	Introduce el nombre del distribuidor:");
 		cadena = sc.next();
 		//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -140,7 +140,7 @@ public class Almacen {
 			System.out.println("\n		procedencia:");
 			lec.setProcedencia(sc.next());
 			System.out.println("\n		€/litro:");
-			lec.setEurosLitro(sc.nextInt());
+			lec.setEurosLitro(sc.nextDouble());
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
 			//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -168,7 +168,7 @@ public class Almacen {
 			System.out.println("Tipo de leche: "+(al_manza.get(i).getTipoManzana()));
 			System.out.println("Prcedencia: "+(al_manza.get(i).getProcedencia()));
 			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
-			System.out.println("€/Kg: "+(al_manza.get(i).getEuroslitro()));
+			System.out.println("€/Kg: "+(al_manza.get(i).getEurosKilo()));
 			System.out.println("****DISTRIBUIDOR*****");
 			    /*
 			    String nombre,	CIF;
@@ -179,7 +179,7 @@ public class Almacen {
 					int telefono;   
 				*/
 			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
-			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
 			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
 			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
 			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
@@ -206,7 +206,7 @@ public class Almacen {
 					int telefono;   
 				*/
 			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
-			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
 			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
 			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
 			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
@@ -232,7 +232,7 @@ public class Almacen {
 					int telefono;   
 				*/
 			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
-			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCif());
+			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
 			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
 			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
 			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
