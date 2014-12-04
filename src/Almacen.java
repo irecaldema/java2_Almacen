@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.ArrayList;
-import java.util.scanner;
+import java.util.Scanner;
 public class Almacen {
 	public static void main (String args[]) throws IOException 	{
 		FileReader fr = new FileReader("distribuidores.txt");
@@ -59,48 +59,87 @@ public class Almacen {
 
 		Scanner sc = new Scanner(System.in);	
 		System.out.println("\nIntroduce la informacion de los productos");
+		String cadena = "";
 		
-		for (int m=0; m<2; m++)
-		{
-			System.out.println("\	manzana "+m+1+":");
+		//manzana
+		ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
+		for (int m=0; m<2; m++)	{
+			System.out.println("\n	manzana "+m+1+":");
 			/*
 			String tipoManzana, procedencia, color, 
 			Double eurosKilo;
 			Distribuidor distribuidor;
-    			*/
-    			Manzana manza = new Manzana();
+    		*/
+    		Manzana manza = new Manzana();
 			//manza.setTipoManzana(sc.next());
-			manza.setDistribuidor(sc.next());
+			System.out.println("\n	Introduce el nombre del distribuidor:");
+			cadena = sc.next();
+			//recorremos el ArrayList de distribuidores para buscar el introducido
+			for(int j=0; j<al_distri.size(); j++){
+				//si lo encontramos
+				if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
+					//le asignamos el valor del distribuidor al objeto leche
+					manza.setDistribuidor(al_distri.get(j));
+				}
+				//añadimos la manzana al ArrayList
+				al_manza.add(manza);
+			}
 		}
 		
-		System.out.println("\	lechuga:");
+		//lechuga
+		ArrayList <Lechuga> al_lechuga = new ArrayList <Lechuga>();
+		System.out.println("\n	lechuga:");
 		/*
 		String tipoLechuga, procedencia, color;
 		Double eurosUnidad;
 		Distribuidor distribuidor;
-    		*/
-    		Lechuga lechu = new Lechuga();
+    	*/
+    	Lechuga lechu = new Lechuga();
 		//lechu.setTipoLechuga(sc.next());
-		lechu.setDistribuidor(sc.next());
+		System.out.println("\n	Introduce el nombre del distribuidor:");
+		cadena = sc.next();
+		//recorremos el ArrayList de distribuidores para buscar el introducido
+		for(int j=0; j<al_distri.size(); j++) {
+			//si lo encontramos
+			if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
+				//le asignamos el valor del distribuidor al objeto leche
+				lechu.setDistribuidor(al_distri.get(j));
+			}
+		}
+		//añadimos la manzana al ArrayList
+		al_lechuga.add(lechu);
 		
+		//leche
+		ArrayList <Leche> al_leche = new ArrayList <Leche>();
 		for (int l=0; l<2; l++)
 		{
 			System.out.println("\n	leche"+l+1+":");
 			/*
-    			String tipo, procedencia;
+    		String tipo, procedencia;
 			Double eurosLitro;
 			Distribuidor distribuidor;
-    			*/
-    			Leche lec = new Leche();
+    		*/
+    		Leche lec = new Leche();
 			//lec.setTipo(sc.next());
-			lec.setDistribuidor(sc.next())
+			System.out.println("\n	Introduce el nombre del distribuidor:");
+			cadena = sc.next();
+			//recorremos el ArrayList de distribuidores para buscar el introducido
+			for(int j=0; j<al_distri.size(); j++)
+			{
+				//si lo encontramos
+				if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
+					//le asignamos el valor del distribuidor al objeto leche
+					lec.setDistribuidor(al_distri.get(j));
+				}
+			//añadimos la leche al ArrayList
+			al_leche.add(lec);	
+			}
 		}
-	
-			
-
     
-		// Vaciar el ArrayList
-		al_distri.clear();		
-		
+		// Vaciar los ArrayList
+		al_distri.clear();
+		al_leche.clear();
+		al_lechuga.clear();
+		al_manza.clear();
 	}
 }	

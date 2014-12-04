@@ -1,4 +1,4 @@
-public class leche {
+public class Leche {
 
     //propiedades
     private String tipo;
