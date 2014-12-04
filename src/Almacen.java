@@ -158,18 +158,18 @@ public class Almacen {
 		
 		//visualizacion de los productos
 		//manzana,lechuga y leche
-		System.out.println("****Manzana*****");
+		System.out.println("****Manzana****");
 			/*
 			String tipoManzana, procedencia, color, 
 			Double eurosKilo;
 			Distribuidor distribuidor;
 			*/
 		for(int i = 0;i<al_manza.size();i++)	{
-			System.out.println("Tipo de leche: "+(al_manza.get(i).getTipoManzana()));
+			System.out.println("Tipo de manzana: "+(al_manza.get(i).getTipoManzana()));
 			System.out.println("Prcedencia: "+(al_manza.get(i).getProcedencia()));
 			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
 			System.out.println("€/Kg: "+(al_manza.get(i).getEurosKilo()));
-			System.out.println("****DISTRIBUIDOR*****");
+			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
 				Direccion direccion;
@@ -181,22 +181,22 @@ public class Almacen {
 			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
 			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
 			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
-			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
-			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_manza.get(i).getDistribuidor().getPersonaContacto().getApellido());
+			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 			System.out.println("*********************************************************");
 		}
-		System.out.println("****Lechuga*****");
+		System.out.println("****Lechuga****");
 			/*
 			String tipoLechuga, procedencia, color;
 			Double eurosUnidad;
 			Distribuidor distribuidor;
 			*/
 		for(int i = 0;i<al_lechuga.size();i++)	{
-			System.out.println("Tipo de leche: "+(al_lechuga.get(i).getTipo()));
+			System.out.println("Tipo de lechuga: "+(al_lechuga.get(i).getTipoLechuga()));
 			System.out.println("Prcedencia: "+(al_lechuga.get(i).getProcedencia()));
 			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
 			System.out.println("€/Unidad: "+(al_lechuga.get(i).getEurosUnidad()));
-			System.out.println("****DISTRIBUIDOR*****");
+			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
 				Direccion direccion;
@@ -205,14 +205,14 @@ public class Almacen {
 				    String nombre, apellido;
 					int telefono;   
 				*/
-			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
-			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
-			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
-			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
-			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("DISTRIBUIDOR: "+(al_lechuga.get(i).getDistribuidor().getNombre()));
+			System.out.println("CIF:" + al_lechuga.get(i).getDistribuidor().getCIF());
+			System.out.println("CIUDAD:" + al_lechuga.get(i).getDistribuidor().getDireccion().getDireccion());
+			System.out.println("CONTACTO:" + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getApellido());
+			System.out.println("TELEFONO:" + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 			System.out.println("*********************************************************");
 		}
-		System.out.println("****Leche*****");
+		System.out.println("****Leche****");
 			/*
     		String tipo, procedencia;
 			Double eurosLitro;
@@ -221,8 +221,8 @@ public class Almacen {
 		for(int i = 0;i<al_leche.size();i++)	{
 			System.out.println("Tipo de leche: "+(al_leche.get(i).getTipo()));
 			System.out.println("Prcedencia: "+(al_leche.get(i).getProcedencia()));
-			System.out.println("€/litro: "+(al_leche.get(i).getEuroslitro()));
-			System.out.println("****DISTRIBUIDOR*****");
+			System.out.println("€/litro: "+(al_leche.get(i).getEurosLitro()));
+			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
 				Direccion direccion;
@@ -231,11 +231,11 @@ public class Almacen {
 				    String nombre, apellido;
 					int telefono;   
 				*/
-			System.out.println("DISTRIBUIDOR: "+(al_manza.get(i).getDistribuidor().getNombre()));
-			System.out.println("CIF:" + al_manza.get(i).getDistribuidor().getCIF());
-			System.out.println("CIUDAD:" + al_manza.get(i).getDistribuidor().getDireccion().getDireccion());
-			System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getContacto().getNombre() + " " + adistribuidor.get(i).getContacto().getApellido());
-			System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getContacto().getTelefono());
+			System.out.println("DISTRIBUIDOR: "+(al_leche.get(i).getDistribuidor().getNombre()));
+			System.out.println("CIF:" + al_leche.get(i).getDistribuidor().getCIF());
+			System.out.println("CIUDAD:" + al_leche.get(i).getDistribuidor().getDireccion().getDireccion());
+			System.out.println("CONTACTO:" + al_leche.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_leche.get(i).getDistribuidor().getPersonaContacto().getApellido());
+			System.out.println("TELEFONO:" + al_leche.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 			System.out.println("*********************************************************");
 		}
     
