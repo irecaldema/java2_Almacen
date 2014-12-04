@@ -69,8 +69,8 @@ public class Almacen {
 			String tipoManzana, procedencia, color, 
 			Double eurosKilo;
 			Distribuidor distribuidor;
-    		*/
-    		Manzana manza = new Manzana();
+			*/
+			Manzana manza = new Manzana();
 			//manza.setTipoManzana(sc.next());
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
@@ -93,8 +93,8 @@ public class Almacen {
 		String tipoLechuga, procedencia, color;
 		Double eurosUnidad;
 		Distribuidor distribuidor;
-    	*/
-    	Lechuga lechu = new Lechuga();
+		*/
+		Lechuga lechu = new Lechuga();
 		//lechu.setTipoLechuga(sc.next());
 		System.out.println("\n	Introduce el nombre del distribuidor:");
 		cadena = sc.next();
