@@ -118,8 +118,8 @@ public class Almacen {
     		String tipo, procedencia;
 			Double eurosLitro;
 			Distribuidor distribuidor;
-    		*/
-    		Leche lec = new Leche();
+			*/
+			Leche lec = new Leche();
 			//lec.setTipo(sc.next());
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
