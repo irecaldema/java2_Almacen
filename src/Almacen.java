@@ -71,7 +71,14 @@ public class Almacen {
 			Distribuidor distribuidor;
 			*/
 			Manzana manza = new Manzana();
-			//manza.setTipoManzana(sc.next());
+			System.out.println("\n		tipo de manzana:");
+			manza.setTipoManzana(sc.next());
+			System.out.println("\n		procedencia:");
+			manza.setProcedencia(sc.next());
+			System.out.println("\n		color:");
+			manza.setColor(sc.next());
+			System.out.println("\n		€/kilo:");
+			manza.setEurosKilo(sc.nextInt());			
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
 			//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -95,7 +102,14 @@ public class Almacen {
 		Distribuidor distribuidor;
 		*/
 		Lechuga lechu = new Lechuga();
-		//lechu.setTipoLechuga(sc.next());
+		System.out.println("\n		tipo de lechuga:");
+		lechu.setTipoLechuga(sc.next());
+		System.out.println("\n		procedencia:");
+		lechu.setProcedencia(sc.next());
+		System.out.println("\n		color:");
+		lechu.setColor(sc.next());
+		System.out.println("\n		€/unidad:");
+		lechu.setEurosUnidad(sc.nextInt());	
 		System.out.println("\n	Introduce el nombre del distribuidor:");
 		cadena = sc.next();
 		//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -121,6 +135,12 @@ public class Almacen {
 			*/
 			Leche lec = new Leche();
 			//lec.setTipo(sc.next());
+			System.out.println("\n		tipo de leche:");
+			lec.setTipo(sc.next());
+			System.out.println("\n		procedencia:");
+			lec.setProcedencia(sc.next());
+			System.out.println("\n		€/litro:");
+			lec.setEurosLitro(sc.nextInt());
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
 			//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -201,7 +221,7 @@ public class Almacen {
 		for(int i = 0;i<al_leche.size();i++)	{
 			System.out.println("Tipo de leche: "+(al_leche.get(i).getTipo()));
 			System.out.println("Prcedencia: "+(al_leche.get(i).getProcedencia()));
-			System.out.println("€/Kg: "+(al_leche.get(i).getEuroslitro()));
+			System.out.println("€/litro: "+(al_leche.get(i).getEuroslitro()));
 			System.out.println("****DISTRIBUIDOR*****");
 			    /*
 			    String nombre,	CIF;
