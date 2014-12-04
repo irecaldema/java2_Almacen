@@ -85,3 +85,5 @@ public class Contacto {
 - Visualiza en la pantalla del terminal el contenido de los ArrayLists para asegurarte de que los productos han sido insertados correctamente.
 
 - Compila y ejecuta para garantizar el buen funcionamiento del programa.
+
+******************************************************
