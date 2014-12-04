@@ -88,9 +88,9 @@ public class Almacen {
 					//le asignamos el valor del distribuidor al objeto leche
 					manza.setDistribuidor(al_distri.get(j));
 				}
-				//añadimos la manzana al ArrayList
-				al_manza.add(manza);
 			}
+			//añadimos la manzana al ArrayList
+			al_manza.add(manza);			
 		}
 		
 		//lechuga
@@ -151,9 +151,9 @@ public class Almacen {
 					//le asignamos el valor del distribuidor al objeto leche
 					lec.setDistribuidor(al_distri.get(j));
 				}
+			}
 			//añadimos la leche al ArrayList
 			al_leche.add(lec);	
-			}
 		}
 		
 		//visualizacion de los productos
