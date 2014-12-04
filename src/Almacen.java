@@ -63,8 +63,10 @@ public class Almacen {
 		
 		//manzana
 		ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
+		int cont = 0;
 		for (int m=0; m<2; m++)	{
-			System.out.println("\n	manzana "+m+1+":");
+			cont=m+1;
+			System.out.println("\n	manzana "+cont+":");
 			/*
 			String tipoManzana, procedencia, color, 
 			Double eurosKilo;
@@ -77,7 +79,7 @@ public class Almacen {
 			manza.setProcedencia(sc.next());
 			System.out.println("\n		color:");
 			manza.setColor(sc.next());
-			System.out.println("\n		€/kilo:");
+			System.out.println("\n		euro/kilo:");
 			manza.setEurosKilo(sc.nextDouble());			
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
@@ -108,7 +110,7 @@ public class Almacen {
 		lechu.setProcedencia(sc.next());
 		System.out.println("\n		color:");
 		lechu.setColor(sc.next());
-		System.out.println("\n		€/unidad:");
+		System.out.println("\n		euro/unidad:");
 		lechu.setEurosUnidad(sc.nextDouble());	
 		System.out.println("\n	Introduce el nombre del distribuidor:");
 		cadena = sc.next();
@@ -125,9 +127,11 @@ public class Almacen {
 		
 		//leche
 		ArrayList <Leche> al_leche = new ArrayList <Leche>();
+		cont=0;
 		for (int l=0; l<2; l++)
 		{
-			System.out.println("\n	leche"+l+1+":");
+			cont=l+1;
+			System.out.println("\n	leche"+cont+":");
 			/*
     		String tipo, procedencia;
 			Double eurosLitro;
@@ -139,7 +143,7 @@ public class Almacen {
 			lec.setTipo(sc.next());
 			System.out.println("\n		procedencia:");
 			lec.setProcedencia(sc.next());
-			System.out.println("\n		€/litro:");
+			System.out.println("\n		euro/litro:");
 			lec.setEurosLitro(sc.nextDouble());
 			System.out.println("\n	Introduce el nombre del distribuidor:");
 			cadena = sc.next();
@@ -168,7 +172,7 @@ public class Almacen {
 			System.out.println("Tipo de manzana: "+(al_manza.get(i).getTipoManzana()));
 			System.out.println("Prcedencia: "+(al_manza.get(i).getProcedencia()));
 			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
-			System.out.println("€/Kg: "+(al_manza.get(i).getEurosKilo()));
+			System.out.println("euro/Kg: "+(al_manza.get(i).getEurosKilo()));
 			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
@@ -195,7 +199,7 @@ public class Almacen {
 			System.out.println("Tipo de lechuga: "+(al_lechuga.get(i).getTipoLechuga()));
 			System.out.println("Prcedencia: "+(al_lechuga.get(i).getProcedencia()));
 			System.out.println("Color: "+(al_lechuga.get(i).getColor()));
-			System.out.println("€/Unidad: "+(al_lechuga.get(i).getEurosUnidad()));
+			System.out.println("euro/Unidad: "+(al_lechuga.get(i).getEurosUnidad()));
 			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
@@ -221,7 +225,7 @@ public class Almacen {
 		for(int i = 0;i<al_leche.size();i++)	{
 			System.out.println("Tipo de leche: "+(al_leche.get(i).getTipo()));
 			System.out.println("Prcedencia: "+(al_leche.get(i).getProcedencia()));
-			System.out.println("€/litro: "+(al_leche.get(i).getEurosLitro()));
+			System.out.println("euro/litro: "+(al_leche.get(i).getEurosLitro()));
 			System.out.println("***DISTRIBUIDOR***");
 			    /*
 			    String nombre,	CIF;
