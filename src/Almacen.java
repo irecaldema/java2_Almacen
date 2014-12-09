@@ -13,9 +13,9 @@ public class Almacen {
 		ArrayList <Distribuidor> al_distri = new ArrayList <Distribuidor> ();		
 		while((s = br.readLine()) != null) { 
 			//creamos los objetos
-			Distribuidor distri=new Distribuidor();
-			Direccion dire=new Direccion();
-			Contacto conta=new Contacto();	
+			Distribuidor distri = new Distribuidor();
+			Direccion dire = new Direccion();
+			Contacto conta = new Contacto();	
 			
 			campos = s.split(",");
 		    
@@ -248,5 +248,37 @@ public class Almacen {
 		al_leche.clear();
 		al_lechuga.clear();
 		al_manza.clear();
+	
+		// *****3.13*****
+		FileReader fr2 = new FileReader("clientes.txt");
+		BufferedReader br2 = new BufferedReader(fr2); 
+		String [] campos2 = null;
+		System.out.println("\nLos clientes:");
+		String s2;
+		ArrayList <Cliente> al_cliente = new ArrayList <Cliente> ();		
+		while((s2 = br2.readLine()) != null) { 
+			//creamos los objetos
+			Cliente cliente = new Cliente();
+			Direccion dire=new Direccion();
+
+			campos2 = s2.split(",");
+		    
+			 //introducimos los valores en los objetos para despues añadirlos al ArrayList
+	 		//Cliente
+	 		cliente.setNombre(campos[0]);
+	 		cliente.setApellidos(campos[1]);
+	 		cliente.setDNI(campos[2]);
+	 		//DIRECCION
+	 		dire.setDireccion(campos[3]);
+	 		//Cliente
+	 		cliente.setNum_socio(Double.parseDouble(campos[4]));
+	 		cliente.setDto(Double.parseDouble(campos[5]));
+	 		//completamos los datos del cliente con los objetos
+			cliente.setDireccion(dire);
+			//añadimos el objeto distribuidor al ArrayList
+			al_cliente.add(cliente);
+		}	
+		// 3.13
+		
 	}
 }	
