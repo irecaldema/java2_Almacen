@@ -87,3 +87,30 @@ public class Contacto {
 - Compila y ejecuta para garantizar el buen funcionamiento del programa.
 
 ******************************************************
+
+3.13
+
+Define las siguiente clase con las propiedades dadas y añade sus métodos getter y setter:
+
+
+public class Cliente {
+//propiedades
+
+private String nombre;
+private String apellidos;
+private String DNI;
+private Dirección dirección;
+private Double num_socio;
+private Double dto;
+
+//métodos getter y setter
+
+}
+
+Dentro del programa principal y tras haber leído el fichero de texto "distribuidores.txt", añade el código necesario para  lea un fichero de texto "clientes.txt" que contiene la información de 4-5 clientes y mete esa lista de clientes en un ArrayList. 
+
+- Visualiza en la pantalla del terminal e contenido del ArrayList para asegurarte de que han sido insertados correctamente.
+
+- Compila y ejecuta para garantizar el buen funcionamiento del programa.
+
+******************************************************
