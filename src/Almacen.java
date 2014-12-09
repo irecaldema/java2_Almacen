@@ -54,8 +54,7 @@ public class Almacen {
 					System.out.println("	" + al_distri.get(x).getPersonaContacto().getApellido());
 					System.out.println("	" + al_distri.get(x).getPersonaContacto().getTelefono());
 			System.out.println("--------------------------------");       
-        	}   
-
+		}   
 
 		Scanner sc = new Scanner(System.in);	
 		System.out.println("\nIntroduce la informacion de los productos");
@@ -250,6 +249,7 @@ public class Almacen {
 		al_manza.clear();
 	
 		// *****3.13*****
+		//lectura del archivo y añadir los datos a un arraylist
 		FileReader fr2 = new FileReader("clientes.txt");
 		BufferedReader br2 = new BufferedReader(fr2); 
 		String [] campos2 = null;
@@ -277,7 +277,8 @@ public class Almacen {
 			cliente.setDireccion(dire);
 			//añadimos el objeto distribuidor al ArrayList
 			al_cliente.add(cliente);
-		}	
+		}
+		//mostrar los datos del arraylist en pantalla
 		// 3.13
 		
 	}
