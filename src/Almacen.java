@@ -279,6 +279,17 @@ public class Almacen {
 			al_cliente.add(cliente);
 		}
 		//mostrar los datos del arraylist en pantalla
+		for(int x=0; x<al_cliente.size(); x++){
+			System.out.println("--------------------------------");	
+			//  String nombre, apellidos, DNI; Direccion direccion; Double num_socio, dto;
+				System.out.println("nombre: " + al_cliente.get(x).getNombre());
+				System.out.println("DNI: " + al_cliente.get(x).getApellidos());
+				System.out.println("direccion: ");
+					System.out.println("	" + al_cliente.get(x).getDireccion().getDireccion());
+				System.out.println("Numero de socio: " + al_cliente.get(x).getNum_socio());
+				System.out.println("Descuento: " + al_cliente.get(x).getDireccion());				
+			System.out.println("--------------------------------");       
+		}  		
 		// 3.13
 		
 	}
