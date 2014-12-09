@@ -1,5 +1,4 @@
 public class Lechuga {
-
     //propiedades
     private String tipoLechuga;
     private String procedencia;

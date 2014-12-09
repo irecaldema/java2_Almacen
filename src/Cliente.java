@@ -1,5 +1,4 @@
 public class Cliente {
-    
     //propiedades
     private String nombre;
     private String apellidos;

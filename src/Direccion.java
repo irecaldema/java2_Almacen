@@ -1,5 +1,4 @@
 public class Direccion {
-
     //añadid las propiedades convenientes
     private String direccion;
 

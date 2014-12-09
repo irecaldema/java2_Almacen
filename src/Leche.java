@@ -1,5 +1,4 @@
 public class Leche {
-
     //propiedades
     private String tipo;
     private String procedencia;

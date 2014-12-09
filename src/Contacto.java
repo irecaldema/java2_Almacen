@@ -1,5 +1,4 @@
 public class Contacto {
-
     //añadid las propiedades convenientes
     private String nombre; 
     private String apellido;
