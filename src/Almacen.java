@@ -289,8 +289,9 @@ public class Almacen {
 				System.out.println("Numero de socio: " + al_cliente.get(x).getNum_socio());
 				System.out.println("Descuento: " + al_cliente.get(x).getDireccion());				
 			System.out.println("--------------------------------");       
-		}  		
+		}  	
+		// Vaciar los ArrayList
+		al_cliente.clear();
 		// 3.13
-		
 	}
 }	
