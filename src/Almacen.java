@@ -259,22 +259,22 @@ public class Almacen {
 		while((s2 = br2.readLine()) != null) { 
 			//creamos los objetos
 			Cliente cliente = new Cliente();
-			Direccion dire=new Direccion();
+			Direccion dire2=new Direccion();
 
 			campos2 = s2.split(",");
 		    
 			 //introducimos los valores en los objetos para despues añadirlos al ArrayList
 	 		//Cliente
-	 		cliente.setNombre(campos[0]);
-	 		cliente.setApellidos(campos[1]);
-	 		cliente.setDNI(campos[2]);
+	 		cliente.setNombre(campos2[0]);
+	 		cliente.setApellidos(campos2[1]);
+	 		cliente.setDNI(campos2[2]);
 	 		//DIRECCION
-	 		dire.setDireccion(campos[3]);
+	 		dire2.setDireccion(campos2[3]);
 	 		//Cliente
-	 		cliente.setNum_socio(Double.parseDouble(campos[4]));
-	 		cliente.setDto(Double.parseDouble(campos[5]));
+	 		cliente.setNum_socio(Double.parseDouble(campos2[4]));
+	 		cliente.setDto(Double.parseDouble(campos2[5]));
 	 		//completamos los datos del cliente con los objetos
-			cliente.setDireccion(dire);
+			cliente.setDireccion(dire2);
 			//añadimos el objeto distribuidor al ArrayList
 			al_cliente.add(cliente);
 		}
@@ -282,16 +282,17 @@ public class Almacen {
 		for(int x=0; x<al_cliente.size(); x++){
 			System.out.println("--------------------------------");	
 			//  String nombre, apellidos, DNI; Direccion direccion; Double num_socio, dto;
-				System.out.println("nombre: " + al_cliente.get(x).getNombre());
-				System.out.println("DNI: " + al_cliente.get(x).getApellidos());
-				System.out.println("direccion: ");
+				System.out.println("Nombre: " + al_cliente.get(x).getNombre());
+				System.out.println("Apellidos: " + al_cliente.get(x).getApellidos());
+				System.out.println("DNI: " + al_cliente.get(x).getDNI());
+				System.out.println("Direccion: ");
 					System.out.println("	" + al_cliente.get(x).getDireccion().getDireccion());
 				System.out.println("Numero de socio: " + al_cliente.get(x).getNum_socio());
-				System.out.println("Descuento: " + al_cliente.get(x).getDireccion());				
+				System.out.println("Descuento: " + al_cliente.get(x).getDto());				
 			System.out.println("--------------------------------");       
 		}  	
 		// Vaciar los ArrayList
 		al_cliente.clear();
-		// 3.13
+		// 3.13 FastFood
 	}
 }	
