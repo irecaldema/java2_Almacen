@@ -5,7 +5,7 @@ public class Cliente {
     private String DNI;
     private Direccion direccion;
     private Double num_socio;
-    private Double dto;
+    private Double dto; //descuento
 
     //métodos getter y setter
     public void setNombre(String nombre) {

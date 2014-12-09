@@ -1,0 +1,5 @@
+Aitor,Giova,47978301W,calle888,1,5
+Roben,Lio,61809718R,avenida Libertad 58,2,5
+Cris,Penal,56345038Y,rotonda Chanel 5,3,5
+Ernesto,Arcilla,56322713Z,calle Londres 28,4,5
+Tallo,Mendes,53936618P,plaza Moscu 67,5,5
