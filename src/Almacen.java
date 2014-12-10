@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Almacen {
@@ -268,9 +269,28 @@ public class Almacen {
 						System.out.println("*********************************************************");
 						System.out.println("Codigo de barras: "+(al_leche.get(i).getCod_barras()));
 					}
+					
+					FileWriter escritor = new FileWriter("productos.txt");
+					String linea="";
+					for(int w = 0;w<al_leche.size();w++)	{
+						//escritor.append(al_leche.get(w));
+						linea=al_leche.get(w).getTipo()+","+al_leche.get(w).getProcedencia();
+						escritor.append(linea);
+					}
+					for(int w = 0;w<al_lechuga.size();w++)	{
+						//escritor.append(al_lechuga.get(w));
+						linea=al_lechuga.get(w).getTipoLechuga()+","+al_lechuga.get(w).getProcedencia();						
+						escritor.append(linea);
+					}
+					for(int w = 0;w<al_manza.size();w++)	{
+						//escritor.append(al_manza.get(w));
+						linea=al_manza.get(w).getTipoManzana()+","+al_manza.get(w).getProcedencia();						
+						escritor.append(linea);
+					}	
+					System.out.println("productos guardados");
+					escritor.close();					
 			    
 					// Vaciar los ArrayList
-					al_distri.clear();
 					al_leche.clear();
 					al_lechuga.clear();
 					al_manza.clear();
