@@ -274,17 +274,17 @@ public class Almacen {
 					String linea="";
 					for(int w = 0;w<al_leche.size();w++)	{
 						//escritor.append(al_leche.get(w));
-						linea=al_leche.get(w).getTipo()+","+al_leche.get(w).getProcedencia();
+						linea=al_leche.get(w).getCod_barras()+","+al_leche.get(w).getEurosLitro();
 						escritor.append(linea);
 					}
 					for(int w = 0;w<al_lechuga.size();w++)	{
 						//escritor.append(al_lechuga.get(w));
-						linea=al_lechuga.get(w).getTipoLechuga()+","+al_lechuga.get(w).getProcedencia();						
+						linea=al_lechuga.get(w).getCod_barras()+","+al_lechuga.get(w).getEurosUnidad();						
 						escritor.append(linea);
 					}
 					for(int w = 0;w<al_manza.size();w++)	{
 						//escritor.append(al_manza.get(w));
-						linea=al_manza.get(w).getTipoManzana()+","+al_manza.get(w).getProcedencia();						
+						linea=al_manza.get(w).getCod_barras()+","+al_manza.get(w).getEurosKilo();						
 						escritor.append(linea);
 					}	
 					System.out.println("productos guardados");
