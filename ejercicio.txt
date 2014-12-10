@@ -114,3 +114,29 @@ Dentro del programa principal y tras haber leído el fichero de texto "distribui
 - Compila y ejecuta para garantizar el buen funcionamiento del programa.
 
 ******************************************************
+
+3.14
+
+Define la clase Cesta con las propiedades dadas y añade sus métodos getter y setter.
+
+Añade a las clases Lechuga, Leche... la propiedad cod_barras y su método getter y setter.
+
+public class Cesta {
+
+//propiedades
+//Cliente
+//ArrayList de cada producto
+
+//métodos getter y setter
+
+//método calcular importe compra
+
+}
+
+Introduce en la cesta 5 productos diferentes por el scanner, leyendo el código de barras 
+
+- Visualiza en la pantalla del terminal el los datos del cliente, los productos de la cesta y el importe, con el descuento para asegurarte de que han sido insertados correctamente.
+
+- Compila y ejecuta para garantizar el buen funcionamiento del programa.
+
+******************************************************
