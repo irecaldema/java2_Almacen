@@ -8,7 +8,10 @@ public class Almacen {
 	public static void main (String args[]) throws IOException 	{
 		Scanner sc = new Scanner(System.in);		
 		int seleccion=0;
-		ArrayList <Distribuidor> al_distri = new ArrayList <Distribuidor> ();//28		
+		ArrayList <Distribuidor> al_distri = new ArrayList <Distribuidor> ();
+		ArrayList <Leche> al_leche = new ArrayList <Leche>();
+		ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
+		ArrayList <Lechuga> al_lechuga = new ArrayList <Lechuga>();
 		System.out.println("\n	Introduce el numero correspondiente:");
 		System.out.println("		1: distribuidores");
 		System.out.println("		2: productos");
@@ -80,7 +83,7 @@ public class Almacen {
 					String cadena = "";
 					
 					//manzana
-					ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
+					//ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
 					int cont = 0;
 					for (int m=0; m<2; m++)	{
 						cont=m+1;
@@ -117,7 +120,7 @@ public class Almacen {
 					}
 					
 					//lechuga
-					ArrayList <Lechuga> al_lechuga = new ArrayList <Lechuga>();
+					//ArrayList <Lechuga> al_lechuga = new ArrayList <Lechuga>();
 					System.out.println("\n	lechuga:");
 					/*
 					String tipoLechuga, procedencia, color;
@@ -150,7 +153,7 @@ public class Almacen {
 					al_lechuga.add(lechu);
 					
 					//leche
-					ArrayList <Leche> al_leche = new ArrayList <Leche>();
+					//ArrayList <Leche> al_leche = new ArrayList <Leche>();
 					cont=0;
 					for (int l=0; l<2; l++)
 					{
