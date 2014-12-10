@@ -211,6 +211,7 @@ public class Almacen {
 						System.out.println("CONTACTO:" + al_manza.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_manza.get(i).getDistribuidor().getPersonaContacto().getApellido());
 						System.out.println("TELEFONO:" + al_manza.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 						System.out.println("*********************************************************");
+						System.out.println("Codigo de barras: "+(al_manza.get(i).getCod_barras()));						
 					}
 					System.out.println("****Lechuga****");
 						/*
@@ -238,6 +239,7 @@ public class Almacen {
 						System.out.println("CONTACTO:" + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getApellido());
 						System.out.println("TELEFONO:" + al_lechuga.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 						System.out.println("*********************************************************");
+						System.out.println("Codigo de barras: "+(al_lechuga.get(i).getCod_barras()));						
 					}
 					System.out.println("****Leche****");
 						/*
@@ -264,6 +266,7 @@ public class Almacen {
 						System.out.println("CONTACTO:" + al_leche.get(i).getDistribuidor().getPersonaContacto().getNombre() + " " + al_leche.get(i).getDistribuidor().getPersonaContacto().getApellido());
 						System.out.println("TELEFONO:" + al_leche.get(i).getDistribuidor().getPersonaContacto().getTelefono());
 						System.out.println("*********************************************************");
+						System.out.println("Codigo de barras: "+(al_leche.get(i).getCod_barras()));
 					}
 			    
 					// Vaciar los ArrayList
