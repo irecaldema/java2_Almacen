@@ -100,7 +100,8 @@ public class Almacen {
 						System.out.println("\n		euro/kilo:");
 						manza.setEurosKilo(sc.nextDouble());			
 						System.out.println("\n	Introduce el nombre del distribuidor:");
-						cadena = sc.next();
+						//cadena = sc.next();
+						cadena = "FastFood";
 						System.out.println("\n	Introduce el codigo de barras:");
 						manza.setCod_barras(sc.nextInt());
 						//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -133,7 +134,8 @@ public class Almacen {
 					System.out.println("\n		euro/unidad:");
 					lechu.setEurosUnidad(sc.nextDouble());	
 					System.out.println("\n	Introduce el nombre del distribuidor:");
-					cadena = sc.next();
+					//cadena = sc.next();
+					cadena = "FastFood";
 					System.out.println("\n	Introduce el codigo de barras:");
 					lechu.setCod_barras(sc.nextInt());
 					//recorremos el ArrayList de distribuidores para buscar el introducido
@@ -168,7 +170,8 @@ public class Almacen {
 						System.out.println("\n		euro/litro:");
 						lec.setEurosLitro(sc.nextDouble());
 						System.out.println("\n	Introduce el nombre del distribuidor:");
-						cadena = sc.next();
+						//cadena = sc.next();
+						cadena = "FastFood";
 						System.out.println("\n	Introduce el codigo de barras:");
 						lec.setCod_barras(sc.nextInt());			
 						//recorremos el ArrayList de distribuidores para buscar el introducido
