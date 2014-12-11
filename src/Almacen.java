@@ -388,10 +388,10 @@ public class Almacen {
 						while((s3 = br3.readLine()) != null) {
 							campos3 = s3.split(";");
 							for (int o = 0; o<campos3.length;o++){
-								campos4 = campos3[o].split("*");
+								campos4 = campos3[o].split("#");
 								for (int p = 0; p<campos3.length;p++){
 									campos5 = campos4[p].split(",");
-									if(campos5[0]=="manzana"){
+									if(o==0){
 									/*
 									String tipoManzana, procedencia, color, 
 									Double eurosKilo;
@@ -405,7 +405,7 @@ public class Almacen {
 										System.out.println("Distribuidor :"+campos5[4]);
 										System.out.println("Codigo de barras :"+campos5[5]);
 									}	
-									else if(campos5[0]=="lechuga"){
+									else if(o==1){
 									/*
 									String tipoLechuga, procedencia, color;
 									Double eurosUnidad;
@@ -419,7 +419,7 @@ public class Almacen {
 										System.out.println("Distribuidor :"+campos5[4]);
 										System.out.println("Codigo de barras :"+campos5[5]);
 									}
-									else if(campos5[0]=="leche"){
+									else if(o==2){
 									/*
 			    					String tipo, procedencia;
 									Double eurosLitro;
