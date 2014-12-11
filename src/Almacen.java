@@ -398,12 +398,14 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
-										System.out.println("Producto :"+campos5[0]);
-										System.out.println("Prcedencia :"+campos5[1]);
-										System.out.println("Color :"+campos5[2]);
-										System.out.println("Euros/kilo :"+campos5[3]);
-										System.out.println("Distribuidor :"+campos5[4]);
-										System.out.println("Codigo de barras :"+campos5[5]);
+										System.out.println("-----manzana "+(p+1)+"-----");
+										System.out.println("Producto: "+campos5[0]);
+										System.out.println("Prcedencia: "+campos5[1]);
+										System.out.println("Color: "+campos5[2]);
+										System.out.println("Euros/kilo: "+campos5[3]);
+										System.out.println("Distribuidor: "+campos5[4]);
+										System.out.println("Codigo de barras: "+campos5[5]);
+										System.out.println("---------------------------");
 									}	
 									else if(o==1){
 									/*
@@ -412,12 +414,14 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
-										System.out.println("Producto :"+campos5[0]);
-										System.out.println("Prcedencia :"+campos5[1]);
-										System.out.println("Color :"+campos5[2]);
-										System.out.println("Euros/unidad :"+campos5[3]);
-										System.out.println("Distribuidor :"+campos5[4]);
-										System.out.println("Codigo de barras :"+campos5[5]);
+										System.out.println("-----lechuga "+(p+1)+"-----");
+										System.out.println("Producto: "+campos5[0]);
+										System.out.println("Prcedencia: "+campos5[1]);
+										System.out.println("Color: "+campos5[2]);
+										System.out.println("Euros/unidad: "+campos5[3]);
+										System.out.println("Distribuidor: "+campos5[4]);
+										System.out.println("Codigo de barras: "+campos5[5]);
+										System.out.println("---------------------------");
 									}
 									else if(o==2){
 									/*
@@ -426,10 +430,12 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
-										System.out.println("Producto :"+campos5[0]);
-										System.out.println("Euros/litro :"+campos5[1]);
-										System.out.println("Distribuidor :"+campos5[2]);
-										System.out.println("Codigo de barras :"+campos5[3]);
+										System.out.println("-----leche "+(p+1)+"-----");
+										System.out.println("Producto: "+campos5[0]);
+										System.out.println("Euros/litro: "+campos5[1]);
+										System.out.println("Distribuidor: "+campos5[2]);
+										System.out.println("Codigo de barras: "+campos5[3]);
+										System.out.println("---------------------------");
 										
 									}//else if
 								}//for	
