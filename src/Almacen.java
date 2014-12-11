@@ -286,31 +286,36 @@ public class Almacen {
 						System.out.println("*********************************************************");
 						System.out.println("Codigo de barras: "+(al_leche.get(i).getCod_barras()));
 					}
-					
+
+					/*
+					// ***escritura de productos***
 					FileWriter escritor = new FileWriter("productos.txt");
 					String linea="";
 					
 					for(int w = 0;w<al_leche.size();w++)	{
 						//escritor.append(al_leche.get(w));
-						linea=al_leche.get(w).getCod_barras()+","+al_leche.get(w).getEurosLitro()+"*";
+						linea="*"+al_leche.get(w).getCod_barras()+","+al_leche.get(w).getEurosLitro()+"*";
 						escritor.append(linea);
 					}
-					escritor.append(";");
+					if (al_leche.size()>0;)
+						escritor.append(";");
 					for(int w = 0;w<al_lechuga.size();w++)	{
 						//escritor.append(al_lechuga.get(w));
-						linea=al_lechuga.get(w).getCod_barras()+","+al_lechuga.get(w).getEurosUnidad()+"*";						
+						linea="*"+al_lechuga.get(w).getCod_barras()+","+al_lechuga.get(w).getEurosUnidad()+"*";						
 						escritor.append(linea);
 					}
-					escritor.append(";");
+					if (al_lechuga.size()>0;)
+						escritor.append(";");
 					for(int w = 0;w<al_manza.size();w++)	{
 						//escritor.append(al_manza.get(w));
-						linea=al_manza.get(w).getCod_barras()+","+al_manza.get(w).getEurosKilo()+"*";						
+						linea="*"+al_manza.get(w).getCod_barras()+","+al_manza.get(w).getEurosKilo()+"*";						
 						escritor.append(linea);
 					}
 					
 					System.out.println("productos guardados");
-					escritor.close();					
-			    
+					escritor.close();
+					//escritura de productos
+			    	*/
 					// Vaciar los ArrayList
 					al_leche.clear();
 					al_lechuga.clear();
@@ -330,7 +335,7 @@ public class Almacen {
 					while((s2 = br2.readLine()) != null) { 
 						//creamos los objetos
 						Cliente cliente = new Cliente();
-						Direccion dire2=new Direccion();
+						Direccion dire2 = new Direccion();
 			
 						campos2 = s2.split(",");
 					    
@@ -369,7 +374,71 @@ public class Almacen {
 				//introducir clientes
 				// *****cesta*****
 				case 4: {
-					
+					System.out.println("\n	Introduce el numero de productos a comprar:");
+					int num_compras = sc.nextInt();
+					for (int k = 0; k<num_compras; k++){
+						// ***lectura de productos***
+						FileReader fr3 = new FileReader("clientes.txt");
+						BufferedReader br3 = new BufferedReader(fr3); 
+						String [] campos3 = null;
+						String [] campos4 = null;
+						String [] campos5 = null;
+						System.out.println("Los productos:");
+						String s3;
+						while((s3 = br3.readLine()) != null) {
+							campos3 = s3.split(";");
+							for (int = o; o<campos3.size();o++){
+								campos4 = campos4.split("*");
+								for (int = o; o<campos3.size();o++){
+									campos5 = campos5.split(",");
+									if(campos5[0]=="manzana"){
+									/*
+									String tipoManzana, procedencia, color, 
+									Double eurosKilo;
+									Distribuidor distribuidor;
+									int cod_barras;
+									*/
+										System.out.println("Producto :"+campos5[0]);
+										System.out.println("Prcedencia :"+campos5[1]);
+										System.out.println("Color :"+campos5[2]);
+										System.out.println("Euros/kilo :"+campos5[3]);
+										System.out.println("Distribuidor :"+campos5[4]);
+										System.out.println("Codigo de barras :"+campos5[5]);
+									}	
+									else if(campos5[0]=="lechuga"){
+									/*
+									String tipoLechuga, procedencia, color;
+									Double eurosUnidad;
+									Distribuidor distribuidor;
+									int cod_barras;
+									*/
+										System.out.println("Producto :"+campos5[0]);
+										System.out.println("Prcedencia :"+campos5[1]);
+										System.out.println("Color :"+campos5[2]);
+										System.out.println("Euros/unidad :"+campos5[3]);
+										System.out.println("Distribuidor :"+campos5[4]);
+										System.out.println("Codigo de barras :"+campos5[5]);
+									}
+									else if(campos5[0]=="leche"){
+									/*
+			    					String tipo, procedencia;
+									Double eurosLitro;
+									Distribuidor distribuidor;
+									int cod_barras;
+									*/
+										System.out.println("Producto :"+campos5[0]);
+										System.out.println("Euros/litro :"+campos5[1]);
+										System.out.println("Distribuidor :"+campos5[2]);
+										System.out.println("Codigo de barras :"+campos5[3]);
+										
+									}//else if
+								}//for	
+							} //for
+							
+						}
+						// lectura de productos
+						System.out.println("\n	Introduce el codigo de barras del producto:");
+					}
 					break;
 				}//case 4
 				// cesta	
