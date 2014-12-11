@@ -387,9 +387,9 @@ public class Almacen {
 						String s3;
 						while((s3 = br3.readLine()) != null) {
 							campos3 = s3.split(";");
-							for (int = o; o<campos3.size();o++){
+							for (int o = 0; o<campos3.size();o++){
 								campos4 = campos4.split("*");
-								for (int = o; o<campos3.size();o++){
+								for (int p = 0; p<campos3.size();p++){
 									campos5 = campos5.split(",");
 									if(campos5[0]=="manzana"){
 									/*
