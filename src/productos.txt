@@ -1,0 +1,1 @@
+manzana,Peru,verde,1.5,FastFood,1111#manzana,Andorra,azul,3.0,FastFood,1212#;#;#
