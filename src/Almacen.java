@@ -12,6 +12,44 @@ public class Almacen {
 		ArrayList <Leche> al_leche = new ArrayList <Leche>();
 		ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
 		ArrayList <Lechuga> al_lechuga = new ArrayList <Lechuga>();
+
+		//***leer distibuidores***
+		FileReader fr = new FileReader("distribuidores.txt");
+		BufferedReader br = new BufferedReader(fr); 
+		String [] campos = null;
+		String s;
+		//ArrayList <Distribuidor> al_distri = new ArrayList <Distribuidor> ();		
+		while((s = br.readLine()) != null) { 
+			//creamos los objetos
+			Distribuidor distri = new Distribuidor();
+			Direccion dire = new Direccion();
+			Contacto conta = new Contacto();	
+						
+			campos = s.split(",");
+			    
+			//introducimos los valores en los objetos para despues añadirlos al ArrayList
+			//DISTRIBUIDOR
+			distri.setNombre(campos[0]);
+			distri.setCIF(campos[1]);
+			//DIRECCION
+			dire.setDireccion(campos[2]);	 			
+			/*
+			odireccion.setCiudad(separado[2]);
+			odireccion.setCalle(separado[3]);
+			odireccion.setNumero(Integer.parseInt(separado[4]));
+			odireccion.setCodPostal(Integer.parseInt(separado[5]));
+			*/
+			//CONTACTO
+			conta.setNombre(campos[3]);
+			conta.setApellido(campos[4]);
+			conta.setTelefono(Integer.parseInt(campos[5]));
+			//completamos los datos del distribuidor con los objetos
+			distri.setDireccion(dire);
+			distri.setPersonaContacto(conta);
+			//añadimos el objeto distribuidor al ArrayList
+			al_distri.add(distri);
+		}//leer distribuidores
+
 		System.out.println("\n	Introduce el numero correspondiente:");
 		System.out.println("		1: distribuidores");
 		System.out.println("		2: productos");
@@ -22,45 +60,8 @@ public class Almacen {
 		while (seleccion!=0){		
 			switch (seleccion) 
 			{
-				case 1: {
-				//***distibuidores***
-					FileReader fr = new FileReader("distribuidores.txt");
-					BufferedReader br = new BufferedReader(fr); 
-					String [] campos = null;
-					System.out.println("\nLos distribuidores:");
-					String s;
-					//ArrayList <Distribuidor> al_distri = new ArrayList <Distribuidor> ();		
-					while((s = br.readLine()) != null) { 
-						//creamos los objetos
-						Distribuidor distri = new Distribuidor();
-						Direccion dire = new Direccion();
-						Contacto conta = new Contacto();	
-						
-						campos = s.split(",");
-					    
-						 //introducimos los valores en los objetos para despues añadirlos al ArrayList
-				 		//DISTRIBUIDOR
-				 		distri.setNombre(campos[0]);
-				 		distri.setCIF(campos[1]);
-				 		//DIRECCION
-				 		dire.setDireccion(campos[2]);	 			
-				 		/*
-				 		odireccion.setCiudad(separado[2]);
-				 		odireccion.setCalle(separado[3]);
-				 		odireccion.setNumero(Integer.parseInt(separado[4]));
-				 		odireccion.setCodPostal(Integer.parseInt(separado[5]));
-				 		*/
-				 		//CONTACTO
-				 		conta.setNombre(campos[3]);
-				 		conta.setApellido(campos[4]);
-				 		conta.setTelefono(Integer.parseInt(campos[5]));
-				 		//completamos los datos del distribuidor con los objetos
-						distri.setDireccion(dire);
-						distri.setPersonaContacto(conta);
-						//añadimos el objeto distribuidor al ArrayList
-						al_distri.add(distri);
-					}
-			
+				case 1: {// ***lectura de distribuidores***	
+				System.out.println("\nLista de distribuidores:");				
 					for(int x=0; x<al_distri.size(); x++){
 						System.out.println("--------------------------------");	
 						//nombre,CIF,o_direccion,o_personaContacto
@@ -75,17 +76,18 @@ public class Almacen {
 						System.out.println("--------------------------------");       
 					}   
 					break;
-				}//case 1
-				//distibuidores
+				}//case 1 lectura de distribuidores
 				case 2: {
 					//***introduccion de productos***		
-					System.out.println("\nIntroduce la informacion de los productos");
+					System.out.println("Introduce la informacion de los productos");
 					String cadena = "";
 					
 					//manzana
 					//ArrayList <Manzana> al_manza = new ArrayList <Manzana>();
 					int cont = 0;
-					for (int m=0; m<2; m++)	{
+					System.out.println("¿Cuantos variedades de manzana?");
+					int manzanas=sc.nextInt();
+					for (int m=0; m<manzanas; m++)	{
 						cont=m+1;
 						System.out.println("\n	manzana "+cont+":");
 						/*
@@ -94,18 +96,18 @@ public class Almacen {
 						Distribuidor distribuidor;
 						*/
 						Manzana manza = new Manzana();
-						System.out.println("\n		tipo de manzana:");
+						System.out.println("		tipo de manzana:");
 						manza.setTipoManzana(sc.next());
-						System.out.println("\n		procedencia:");
+						System.out.println("		procedencia:");
 						manza.setProcedencia(sc.next());
-						System.out.println("\n		color:");
+						System.out.println("		color:");
 						manza.setColor(sc.next());
-						System.out.println("\n		euro/kilo:");
+						System.out.println("		euro/kilo:");
 						manza.setEurosKilo(sc.nextDouble());			
-						System.out.println("\n	Introduce el nombre del distribuidor:");
+						System.out.println("	Introduce el nombre del distribuidor:");
 						//cadena = sc.next();
 						cadena = "FastFood";
-						System.out.println("\n	Introduce el codigo de barras:");
+						System.out.println("	Introduce el codigo de barras:");
 						manza.setCod_barras(sc.nextInt());
 						//recorremos el ArrayList de distribuidores para buscar el introducido
 						for(int j=0; j<al_distri.size(); j++){
@@ -127,38 +129,46 @@ public class Almacen {
 					Double eurosUnidad;
 					Distribuidor distribuidor;
 					*/
-					Lechuga lechu = new Lechuga();
-					System.out.println("\n		tipo de lechuga:");
-					lechu.setTipoLechuga(sc.next());
-					System.out.println("\n		procedencia:");
-					lechu.setProcedencia(sc.next());
-					System.out.println("\n		color:");
-					lechu.setColor(sc.next());
-					System.out.println("\n		euro/unidad:");
-					lechu.setEurosUnidad(sc.nextDouble());	
-					System.out.println("\n	Introduce el nombre del distribuidor:");
-					//cadena = sc.next();
-					cadena = "FastFood";
-					System.out.println("\n	Introduce el codigo de barras:");
-					lechu.setCod_barras(sc.nextInt());
-					//recorremos el ArrayList de distribuidores para buscar el introducido
-					for(int j=0; j<al_distri.size(); j++) {
-						//si lo encontramos
-						if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
-							//le asignamos el valor del distribuidor al objeto leche
-							lechu.setDistribuidor(al_distri.get(j));
+					System.out.println("¿Cuantos variedades de leche?");
+					int lechugas=sc.nextInt();
+					for (int l=0; l<lechugas; l++)
+					{					
+						Lechuga lechu = new Lechuga();
+						cont=l+1;
+						System.out.println("\n	Lechuga "+cont+":");						
+						System.out.println("		tipo de lechuga:");
+						lechu.setTipoLechuga(sc.next());
+						System.out.println("		procedencia:");
+						lechu.setProcedencia(sc.next());
+						System.out.println("		color:");
+						lechu.setColor(sc.next());
+						System.out.println("		euro/unidad:");
+						lechu.setEurosUnidad(sc.nextDouble());	
+						System.out.println("	Introduce el nombre del distribuidor:");
+						//cadena = sc.next();
+						cadena = "FastFood";
+						System.out.println("	Introduce el codigo de barras:");
+						lechu.setCod_barras(sc.nextInt());
+						//recorremos el ArrayList de distribuidores para buscar el introducido
+						for(int j=0; j<al_distri.size(); j++) {
+							//si lo encontramos
+							if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
+								//le asignamos el valor del distribuidor al objeto leche
+								lechu.setDistribuidor(al_distri.get(j));
+							}
 						}
+						//añadimos la manzana al ArrayList
+						al_lechuga.add(lechu);
 					}
-					//añadimos la manzana al ArrayList
-					al_lechuga.add(lechu);
-					
 					//leche
 					//ArrayList <Leche> al_leche = new ArrayList <Leche>();
 					cont=0;
-					for (int l=0; l<2; l++)
+					System.out.println("¿Cuantos variedades de leche?");
+					int leches=sc.nextInt();
+					for (int l=0; l<leches; l++)
 					{
 						cont=l+1;
-						System.out.println("\n	leche"+cont+":");
+						System.out.println("\n	leche "+cont+":");
 						/*
 			    		String tipo, procedencia;
 						Double eurosLitro;
@@ -166,16 +176,16 @@ public class Almacen {
 						*/
 						Leche lec = new Leche();
 						//lec.setTipo(sc.next());
-						System.out.println("\n		tipo de leche:");
+						System.out.println("		tipo de leche:");
 						lec.setTipo(sc.next());
-						System.out.println("\n		procedencia:");
+						System.out.println("		procedencia:");
 						lec.setProcedencia(sc.next());
-						System.out.println("\n		euro/litro:");
+						System.out.println("		euro/litro:");
 						lec.setEurosLitro(sc.nextDouble());
-						System.out.println("\n	Introduce el nombre del distribuidor:");
+						System.out.println("	Introduce el nombre del distribuidor:");
 						//cadena = sc.next();
 						cadena = "FastFood";
-						System.out.println("\n	Introduce el codigo de barras:");
+						System.out.println("	Introduce el codigo de barras:");
 						lec.setCod_barras(sc.nextInt());			
 						//recorremos el ArrayList de distribuidores para buscar el introducido
 						for(int j=0; j<al_distri.size(); j++)
@@ -184,6 +194,7 @@ public class Almacen {
 							if (cadena.equalsIgnoreCase(al_distri.get(j).getNombre())){
 								//le asignamos el valor del distribuidor al objeto leche
 								lec.setDistribuidor(al_distri.get(j));
+								break;//una vez encontrado salimos del bucle
 							}
 						}
 						//añadimos la leche al ArrayList
@@ -278,21 +289,25 @@ public class Almacen {
 					
 					FileWriter escritor = new FileWriter("productos.txt");
 					String linea="";
+					
 					for(int w = 0;w<al_leche.size();w++)	{
 						//escritor.append(al_leche.get(w));
-						linea=al_leche.get(w).getCod_barras()+","+al_leche.get(w).getEurosLitro();
+						linea=al_leche.get(w).getCod_barras()+","+al_leche.get(w).getEurosLitro()+"*";
 						escritor.append(linea);
 					}
+					escritor.append(";");
 					for(int w = 0;w<al_lechuga.size();w++)	{
 						//escritor.append(al_lechuga.get(w));
-						linea=al_lechuga.get(w).getCod_barras()+","+al_lechuga.get(w).getEurosUnidad();						
+						linea=al_lechuga.get(w).getCod_barras()+","+al_lechuga.get(w).getEurosUnidad()+"*";						
 						escritor.append(linea);
 					}
+					escritor.append(";");
 					for(int w = 0;w<al_manza.size();w++)	{
 						//escritor.append(al_manza.get(w));
-						linea=al_manza.get(w).getCod_barras()+","+al_manza.get(w).getEurosKilo();						
+						linea=al_manza.get(w).getCod_barras()+","+al_manza.get(w).getEurosKilo()+"*";						
 						escritor.append(linea);
-					}	
+					}
+					
 					System.out.println("productos guardados");
 					escritor.close();					
 			    
