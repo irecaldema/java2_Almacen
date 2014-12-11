@@ -378,7 +378,7 @@ public class Almacen {
 					int num_compras = sc.nextInt();
 					for (int k = 0; k<num_compras; k++){
 						// ***lectura de productos***
-						FileReader fr3 = new FileReader("clientes.txt");
+						FileReader fr3 = new FileReader("productos.txt");
 						BufferedReader br3 = new BufferedReader(fr3); 
 						String [] campos3 = null;
 						String [] campos4 = null;
