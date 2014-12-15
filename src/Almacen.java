@@ -50,6 +50,38 @@ public class Almacen {
 			al_distri.add(distri);
 		}//leer distribuidores
 
+		// *****lectura clientes*****
+		//lectura del archivo y añadir los datos a un arraylist
+		FileReader fr2 = new FileReader("clientes.txt");
+		BufferedReader br2 = new BufferedReader(fr2); 
+		String [] campos2 = null;
+		System.out.println("\nLos clientes:");
+		String s2;
+		ArrayList <Cliente> al_cliente = new ArrayList <Cliente> ();		
+		while((s2 = br2.readLine()) != null) { 
+			//creamos los objetos
+			Cliente cliente = new Cliente();
+			Direccion dire2 = new Direccion();
+			
+			campos2 = s2.split(",");
+					    
+			//introducimos los valores en los objetos para despues añadirlos al ArrayList
+	 		//Cliente
+	 		cliente.setNombre(campos2[0]);
+	 		cliente.setApellidos(campos2[1]);
+	 		cliente.setDNI(campos2[2]);
+	 		//DIRECCION
+	 		dire2.setDireccion(campos2[3]);
+	 		//Cliente
+	 		cliente.setNum_socio(Double.parseDouble(campos2[4]));
+	 		cliente.setDto(Double.parseDouble(campos2[5]));
+	 		//completamos los datos del cliente con los objetos
+			cliente.setDireccion(dire2);
+			//añadimos el objeto distribuidor al ArrayList
+			al_cliente.add(cliente);
+		}
+		// lectura de clienetes
+
 		System.out.println("\n	Introduce el numero correspondiente:");
 		System.out.println("		1: distribuidores");
 		System.out.println("		2: productos");
@@ -324,36 +356,7 @@ public class Almacen {
 				}//case 2
 				//visualizacion de los productos
 				case 3: {			
-					// *****introducir clientes*****
-					//lectura del archivo y añadir los datos a un arraylist
-					FileReader fr2 = new FileReader("clientes.txt");
-					BufferedReader br2 = new BufferedReader(fr2); 
-					String [] campos2 = null;
-					System.out.println("\nLos clientes:");
-					String s2;
-					ArrayList <Cliente> al_cliente = new ArrayList <Cliente> ();		
-					while((s2 = br2.readLine()) != null) { 
-						//creamos los objetos
-						Cliente cliente = new Cliente();
-						Direccion dire2 = new Direccion();
-			
-						campos2 = s2.split(",");
-					    
-						 //introducimos los valores en los objetos para despues añadirlos al ArrayList
-				 		//Cliente
-				 		cliente.setNombre(campos2[0]);
-				 		cliente.setApellidos(campos2[1]);
-				 		cliente.setDNI(campos2[2]);
-				 		//DIRECCION
-				 		dire2.setDireccion(campos2[3]);
-				 		//Cliente
-				 		cliente.setNum_socio(Double.parseDouble(campos2[4]));
-				 		cliente.setDto(Double.parseDouble(campos2[5]));
-				 		//completamos los datos del cliente con los objetos
-						cliente.setDireccion(dire2);
-						//añadimos el objeto distribuidor al ArrayList
-						al_cliente.add(cliente);
-					}
+
 					//mostrar los datos del arraylist en pantalla
 					for(int x=0; x<al_cliente.size(); x++){
 						System.out.println("--------------------------------");	
