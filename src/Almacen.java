@@ -55,7 +55,6 @@ public class Almacen {
 		FileReader fr2 = new FileReader("clientes.txt");
 		BufferedReader br2 = new BufferedReader(fr2); 
 		String [] campos2 = null;
-		System.out.println("\nLos clientes:");
 		String s2;
 		ArrayList <Cliente> al_cliente = new ArrayList <Cliente> ();		
 		while((s2 = br2.readLine()) != null) { 
@@ -352,7 +351,7 @@ public class Almacen {
 				}//case 2
 				//visualizacion de los productos
 				case 3: {			
-					
+					System.out.println("\nLos clientes:");
 					//mostrar los clientes por pantalla
 					for(int x=0; x<al_cliente.size(); x++){
 						System.out.println("--------------------------------");	
