@@ -476,7 +476,7 @@ public class Almacen {
 							break;
 						}
 					}
-					double total =suma*descuento/100;
+					double total =suma-suma*descuento/100;
 					System.out.println("total a pagar: "+total);
 						
 					break;
