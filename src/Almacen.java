@@ -348,16 +348,12 @@ public class Almacen {
 					escritor.close();
 					//escritura de productos
 			    	*/
-					// Vaciar los ArrayList
-					al_leche.clear();
-					al_lechuga.clear();
-					al_manza.clear();
 					break;
 				}//case 2
 				//visualizacion de los productos
 				case 3: {			
-
-					//mostrar los datos del arraylist en pantalla
+					
+					//mostrar los clientes por pantalla
 					for(int x=0; x<al_cliente.size(); x++){
 						System.out.println("--------------------------------");	
 						//  String nombre, apellidos, DNI; Direccion direccion; Double num_socio, dto;
@@ -370,8 +366,7 @@ public class Almacen {
 							System.out.println("Descuento: " + al_cliente.get(x).getDto());				
 						System.out.println("--------------------------------");       
 					}  	
-					// Vaciar los ArrayList
-					al_cliente.clear();
+
 					break;
 				}//case 3
 				//introducir clientes
@@ -379,8 +374,12 @@ public class Almacen {
 				case 4: {
 					System.out.println("\n	Introduce el numero de productos a comprar:");
 					int num_compras = sc.nextInt();
+					double suma, precio;
 					for (int k = 0; k<num_compras; k++){
 						// ***lectura de productos***
+						al_lechuga.clear();
+						al_manza.clear();
+						al_leche.clear();
 						FileReader fr3 = new FileReader("productos.txt");
 						BufferedReader br3 = new BufferedReader(fr3); 
 						String [] campos3 = null;
@@ -401,14 +400,22 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
+										Manzana manza = new Manzana();
 										System.out.println("-----manzana "+(p+1)+"-----");
-										System.out.println("Producto: "+campos5[0]);
-										System.out.println("Prcedencia: "+campos5[1]);
-										System.out.println("Color: "+campos5[2]);
-										System.out.println("Euros/kilo: "+campos5[3]);
+										System.out.println("Producto: "+campos5[0]);manza.setTipoManzana(campos5[0]);
+										System.out.println("Prcedencia: "+campos5[1]);manza.setProcedencia(campos5[1]);
+										System.out.println("Color: "+campos5[2]);manza.setColor(campos5[2]);
+										System.out.println("Euros/kilo: "+campos5[3]);manza.setEurosKilo(Double.parseDouble(campos5[3]));
 										System.out.println("Distribuidor: "+campos5[4]);
-										System.out.println("Codigo de barras: "+campos5[5]);
-										System.out.println("---------------------------");
+											for(int j=0; j<al_distri.size(); j++){
+												//si lo encontramos
+												if (campos5[5].equalsIgnoreCase(al_distri.get(j).getNombre())){
+												//le asignamos el valor del distribuidor al objeto leche
+													manza.setDistribuidor(al_distri.get(j));
+												}
+											}
+										System.out.println("Codigo de barras: "+campos5[5]);manza.setCod_barras(Integer.parseInt(campos5[5]));
+										System.out.println("---------------------------");al_manza.add(manza);
 									}	
 									else if(o==1){
 									/*
@@ -443,11 +450,35 @@ public class Almacen {
 									}//else if
 								}//for	
 							} //for
-							
-						}
+						}//while
 						// lectura de productos
+						
 						System.out.println("\n	Introduce el codigo de barras del producto:");
+						double cod_barras=sc.nextDouble();
+						for (int i=0; i<al_manza.size();i++){
+							if (al_manza.get(i).getCod_barras==cod_barras){
+		    	    			System.out.println("Producto:"+al_manza.get(i).getCod_barras+" Codigo de barras: "+ al_manza.get(i).getCod_barras +" precio: "+al_manza.get(i).getEurosKilo );
+								System.out.println("Introduce la cantidad que quiere comprar");
+								double cantidad = sc.nextDouble();
+								precio=al_manza.get(i).getEurosKilo*cantidad;
+							}
+						}
+						suma=suma+precio;
 					}
+					System.out.println("Introduce el DNI del cliente");
+					String DNI_clie = sc.next();
+					double descuento;
+					for(int j=0; j<al_cliente.size(); j++) {
+						//si lo encontramos
+						if (DNI_clie.equalsIgnoreCase(al_cliente.get(j).getDNI())){
+							//le asignamos el valor del distribuidor al objeto leche
+							descuento=al_cliente.get(j).getDto();
+							break;
+						}
+					}
+					double total =suma*descuento/100;
+					System.out.println("total a pagar: "+total);
+						
 					break;
 				}//case 4
 				// cesta	
@@ -456,7 +487,7 @@ public class Almacen {
 					System.out.println("\n	No has seleccionado una opcion valida:");
 				}//default
 			}//switch
-		
+			
 			System.out.println("\n	Introduce el numero correspondiente:");
 			System.out.println("		1: distribuidores");
 			System.out.println("		2: productos");
