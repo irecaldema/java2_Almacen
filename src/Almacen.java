@@ -374,7 +374,7 @@ public class Almacen {
 				case 4: {
 					System.out.println("\n	Introduce el numero de productos a comprar:");
 					int num_compras = sc.nextInt();
-					double suma, precio;
+					double suma=0, precio=0;
 					for (int k = 0; k<num_compras; k++){
 						// ***lectura de productos***
 						al_lechuga.clear();
@@ -454,20 +454,20 @@ public class Almacen {
 						// lectura de productos
 						
 						System.out.println("\n	Introduce el codigo de barras del producto:");
-						double cod_barras=sc.nextDouble();
+						int cod_barras=sc.nextInt();
 						for (int i=0; i<al_manza.size();i++){
-							if (al_manza.get(i).getCod_barras==cod_barras){
-		    	    			System.out.println("Producto:"+al_manza.get(i).getCod_barras+" Codigo de barras: "+ al_manza.get(i).getCod_barras +" precio: "+al_manza.get(i).getEurosKilo );
+							if (al_manza.get(i).getCod_barras()==cod_barras){
+		    	    			System.out.println("Producto:"+al_manza.get(i).getCod_barras()+" Codigo de barras: "+ al_manza.get(i).getCod_barras() +" precio: "+al_manza.get(i).getEurosKilo() );
 								System.out.println("Introduce la cantidad que quiere comprar");
 								double cantidad = sc.nextDouble();
-								precio=al_manza.get(i).getEurosKilo*cantidad;
+								precio=al_manza.get(i).getEurosKilo()*cantidad;
 							}
 						}
 						suma=suma+precio;
 					}
 					System.out.println("Introduce el DNI del cliente");
 					String DNI_clie = sc.next();
-					double descuento;
+					double descuento=0;
 					for(int j=0; j<al_cliente.size(); j++) {
 						//si lo encontramos
 						if (DNI_clie.equalsIgnoreCase(al_cliente.get(j).getDNI())){
