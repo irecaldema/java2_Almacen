@@ -388,10 +388,15 @@ public class Almacen {
 						String s3;
 						while((s3 = br3.readLine()) != null) {
 							campos3 = s3.split(";");
+																//	System.out.println(campos3[2]+"  c3: " +campos3.length);
 							for (int o = 0; o<campos3.length;o++){
+																//	System.out.println("o: "+o);								
 								campos4 = campos3[o].split("#");
-								for (int p = 0; p<campos3.length;p++){
+																//	System.out.println(campos4[1]+"  c4: "+campos4.length);
+								for (int p = 0; p<campos4.length;p++){
+																	//System.out.println("p: "+p);									
 									campos5 = campos4[p].split(",");
+																	//System.out.println(campos5[0]+" c5: "+campos5.length);
 									if(o==0){
 									/*
 									String tipoManzana, procedencia, color, 
@@ -423,6 +428,9 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
+									if (campos5[0].equalsIgnoreCase("nulo")){}
+									else
+									{
 										System.out.println("-----lechuga "+(p+1)+"-----");
 										System.out.println("Producto: "+campos5[0]);
 										System.out.println("Prcedencia: "+campos5[1]);
@@ -431,6 +439,7 @@ public class Almacen {
 										System.out.println("Distribuidor: "+campos5[4]);
 										System.out.println("Codigo de barras: "+campos5[5]);
 										System.out.println("---------------------------");
+									}	
 									}
 									else if(o==2){
 									/*
@@ -439,12 +448,16 @@ public class Almacen {
 									Distribuidor distribuidor;
 									int cod_barras;
 									*/
+									if (campos5[0].equalsIgnoreCase("nulo")){}
+									else
+									{
 										System.out.println("-----leche "+(p+1)+"-----");
 										System.out.println("Producto: "+campos5[0]);
 										System.out.println("Euros/litro: "+campos5[1]);
 										System.out.println("Distribuidor: "+campos5[2]);
 										System.out.println("Codigo de barras: "+campos5[3]);
 										System.out.println("---------------------------");
+									}	
 										
 									}//else if
 								}//for	

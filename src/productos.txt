@@ -1,1 +1,1 @@
-manzanaX,Peru,verde,1.5,FastFood,1111#manzanaY,Andorra,azul,3.0,FastFood,1212#;lechugaX,peru,amarillo,2.3,FastFood,2222#;lecheX,Ecuadorm,3.3,FastFood,3333#
+manzanaX,Peru,verde,1.5,FastFood,1111#manzanaY,Andorra,azul,3.0,FastFood,1212#;lechugaX,peru,amarillo,2.3,FastFood,2222#nulo#;lecheX,Ecuadorm,3.3,FastFood,3333,nulo#nulo#
