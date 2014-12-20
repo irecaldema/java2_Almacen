@@ -413,9 +413,10 @@ public class Almacen {
 										System.out.println("Distribuidor: "+campos5[4]);
 											for(int j=0; j<al_distri.size(); j++){
 												//si lo encontramos
-												if (campos5[5].equalsIgnoreCase(al_distri.get(j).getNombre())){
+												if (campos5[4].equalsIgnoreCase(al_distri.get(j).getNombre())){
 												//le asignamos el valor del distribuidor al objeto leche
 													manza.setDistribuidor(al_distri.get(j));
+													break;
 												}
 											}
 										System.out.println("Codigo de barras: "+campos5[5]);manza.setCod_barras(Integer.parseInt(campos5[5]));
@@ -431,14 +432,23 @@ public class Almacen {
 									if (campos5[0].equalsIgnoreCase("nulo")){}
 									else
 									{
+										Lechuga lechuga = new Lechuga();
 										System.out.println("-----lechuga "+(p+1)+"-----");
-										System.out.println("Producto: "+campos5[0]);
-										System.out.println("Prcedencia: "+campos5[1]);
-										System.out.println("Color: "+campos5[2]);
-										System.out.println("Euros/unidad: "+campos5[3]);
+										System.out.println("Producto: "+campos5[0]);lechuga.setTipoLechuga(campos5[0]);
+										System.out.println("Prcedencia: "+campos5[1]);lechuga.setProcedencia(campos5[1]);
+										System.out.println("Color: "+campos5[2]);lechuga.setColor(campos5[2]);
+										System.out.println("Euros/unidad: "+campos5[3]);lechuga.setEurosUnidad(Double.parseDouble(campos5[3]));
 										System.out.println("Distribuidor: "+campos5[4]);
-										System.out.println("Codigo de barras: "+campos5[5]);
-										System.out.println("---------------------------");
+											for(int j=0; j<al_distri.size(); j++){
+												//si lo encontramos
+												if (campos5[4].equalsIgnoreCase(al_distri.get(j).getNombre())){
+												//le asignamos el valor del distribuidor al objeto leche
+													lechuga.setDistribuidor(al_distri.get(j));
+													break;
+												}
+											}
+										System.out.println("Codigo de barras: "+campos5[5]);lechuga.setCod_barras(Integer.parseInt(campos5[5]));
+										System.out.println("---------------------------");al_lechuga.add(lechuga);
 									}	
 									}
 									else if(o==2){
@@ -451,12 +461,21 @@ public class Almacen {
 									if (campos5[0].equalsIgnoreCase("nulo")){}
 									else
 									{
+										Leche leche = new Leche();
 										System.out.println("-----leche "+(p+1)+"-----");
-										System.out.println("Producto: "+campos5[0]);
-										System.out.println("Euros/litro: "+campos5[1]);
+										System.out.println("Producto: "+campos5[0]);leche.setTipo(campos5[0]);
+										System.out.println("Euros/litro: "+campos5[1]);leche.setEurosLitro(Double.parseDouble(campos5[1]));
 										System.out.println("Distribuidor: "+campos5[2]);
-										System.out.println("Codigo de barras: "+campos5[3]);
-										System.out.println("---------------------------");
+											for(int j=0; j<al_distri.size(); j++){
+												//si lo encontramos
+												if (campos5[2].equalsIgnoreCase(al_distri.get(j).getNombre())){
+												//le asignamos el valor del distribuidor al objeto leche
+													leche.setDistribuidor(al_distri.get(j));
+													break;
+												}
+											}
+										System.out.println("Codigo de barras: "+campos5[3]);leche.setCod_barras(Integer.parseInt(campos5[3]));
+										System.out.println("---------------------------");al_leche.add(leche);
 									}	
 										
 									}//else if
@@ -464,19 +483,41 @@ public class Almacen {
 							} //for
 						}//while
 						// lectura de productos
-						
+					//***comprar prductos segun el codigo de barras***	
 						System.out.println("\n	Introduce el codigo de barras del producto:");
 						int cod_barras=sc.nextInt();
+						//*** busqueda del producto en manzanas	***
 						for (int i=0; i<al_manza.size();i++){
 							if (al_manza.get(i).getCod_barras()==cod_barras){
 		    	    			System.out.println("Producto:"+al_manza.get(i).getCod_barras()+" Codigo de barras: "+ al_manza.get(i).getCod_barras() +" precio: "+al_manza.get(i).getEurosKilo() );
 								System.out.println("Introduce la cantidad que quiere comprar");
 								double cantidad = sc.nextDouble();
 								precio=al_manza.get(i).getEurosKilo()*cantidad;
+								break;
+							}
+						}//busqueda del producto en manzanas
+						//***busqueda del producto en lechugas***
+						for (int i=0; i<al_lechuga.size();i++){
+							if (al_lechuga.get(i).getCod_barras()==cod_barras){
+		    	    			System.out.println("Producto:"+al_lechuga.get(i).getCod_barras()+" Codigo de barras: "+ al_lechuga.get(i).getCod_barras() +" precio: "+al_lechuga.get(i).getEurosUnidad() );
+								System.out.println("Introduce la cantidad que quiere comprar");
+								double cantidad = sc.nextDouble();
+								precio=al_lechuga.get(i).getEurosUnidad()*cantidad;
+								break;
+							}
+						}//busqueda del producto en lechugas
+						//***busqueda del producto en leches***
+						for (int i=0; i<al_leche.size();i++){
+							if (al_leche.get(i).getCod_barras()==cod_barras){
+		    	    			System.out.println("Producto:"+al_leche.get(i).getCod_barras()+" Codigo de barras: "+ al_leche.get(i).getCod_barras() +" precio: "+al_leche.get(i).getEurosLitro() );
+								System.out.println("Introduce la cantidad que quiere comprar");
+								double cantidad = sc.nextDouble();
+								precio=al_leche.get(i).getEurosLitro()*cantidad;
+								break;
 							}
 						}
 						suma=suma+precio;
-					}
+					}//busqueda del producto en leches
 					System.out.println("Introduce el DNI del cliente");
 					String DNI_clie = sc.next();
 					double descuento=0;
